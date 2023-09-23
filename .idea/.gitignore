@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 # Default ignored files
 /shelf/
 /workspace.xml
 # Editor-based HTTP Client requests
+=======
+# 디폴트 무시된 파일
+/shelf/
+/workspace.xml
+# 에디터 기반 HTTP 클라이언트 요청
+>>>>>>> 3ad79e8ca9a5cf3e1d7b1f3adbe4f8c0c6eb3037
 /httpRequests/
