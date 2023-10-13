@@ -7,16 +7,13 @@ let input = fs.readFileSync('../test.txt').toString().split(' ');
 let testCase = Number(input[0]);
 console.log(testCase)
 let deletePosition = Number(input[1])
-class CircleQueue {
-     strage = []; // 포인터에 값을 저장 시킬 장소
-     maxQue = testCase;
-     front = 0; //첫 원소를 가르키는 포인터
-     rear = 0; // 마지막 원소를 가르킬 포인터
-     size = 0;
-
-    constructor() {
-        this.maxQue = testCase;
+class CircleQueue{
+    constructor(maxQue) {
+        this.maxQue = maxQue;
         this.strage = Array(this.maxQue).fill(null)
+        this.front = 0; //첫 원소를 가르키는 포인터
+        this.rear = 0; // 마지막 원소를 가르킬 포인터
+        this.size = 0;  // 큐 안에 있는 요소의 크기
     }
 
     isEmpty() {
@@ -27,7 +24,7 @@ class CircleQueue {
     }
 
     isFull(){
-        if ((this.rear+1)%this.maxQue === this.front){
+        if (this.front === this.rear) {
             return true;
         }else return false;
     }
@@ -38,7 +35,7 @@ class CircleQueue {
 
 
     Enqueue(X) {  // 큐에 값을 저장하는 메소드
-        if (!this.isEmpty()) {
+        if (!this.isFull()) {
             this.rear = (this.rear+1)%this.maxQue;
             this.strage[this.rear] = X;
             this.size++;

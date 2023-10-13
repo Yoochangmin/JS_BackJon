@@ -1,11 +1,6 @@
 let fs = require('fs');
 
-<<<<<<< HEAD
-let input = fs.readFileSync('test.txt').toString().split('\n');
-=======
 let input = fs.readFileSync('/dev/stdin').toString().split('\n');
->>>>>>> 470c1281ef128c78423baeb7096cea54286e2f06
-
 let testArr = input[1].split(' ').map(Number);
 
 
