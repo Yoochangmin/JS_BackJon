@@ -11,7 +11,7 @@ class CircleQueue{
     constructor(maxQue) {
         this.maxQue = maxQue;
         this.strage = Array(this.maxQue).fill(null)
-        this.front = 0; //첫 원소를 가르키는 포인터
+        this.front = 0;  //첫 원소를 가르키는 포인터
         this.rear = 0; // 마지막 원소를 가르킬 포인터
         this.size = 0;  // 큐 안에 있는 요소의 크기
     }
